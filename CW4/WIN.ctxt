@@ -1,0 +1,34 @@
+#BlueJ class context
+comment0.target=WIN
+comment0.text=\r\n\ Interace\ WIN\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=java.lang.String\ toString()
+comment1.text=\r\n\ Returns\ information\ about\ admiral's\ war\ chest\r\n\ list\ of\ all\ forces\ in\ his\ active\ star\ fleet\r\n\ all\ forces\ in\ the\ United\ forces\ fleet's\ dock\r\n\ list\ of\ all\ possible\ battles\r\n\ state\ of\ one\ of\ the\ forces\r\n
+comment10.params=name1\ name2
+comment10.target=void\ LoadFile(java.lang.String,\ java.lang.String)
+comment10.text=\r\n\ Allows\ player\ to\ load\ the\ game\ from\ a\ named\ file\r\n\ @param\:\ name1\ is\ the\ name\ of\ the\ player\r\n\ @param\:\ name2\ is\ the\ name\ of\ the\ file\ \r\n
+comment2.params=
+comment2.target=java.lang.String\ getAllForces()
+comment2.text=\r\n\ Returns\ a\ string\ containing\ all\ forces\ in\ the\ UFF\r\n
+comment3.params=id
+comment3.target=boolean\ findBattle(int)
+comment3.text=\r\n\ Returns\ true\ if\ a\ battle\ is\ part\ of\ the\ system\r\n\ otherwise\ returns\ false\r\n\ @param\:\ id\ is\ battle\ id\r\n
+comment4.params=id
+comment4.target=boolean\ findForce(int)
+comment4.text=\r\n\ Returns\ true\ if\ a\ force\ is\ part\ of\ the\ system\r\n\ otherwise\ returns\ false\r\n\ @param\:\ id\ is\ force\ id\r\n
+comment5.params=id\ name
+comment5.target=boolean\ canActivateForce(int,\ java.lang.String)
+comment5.text=\r\n\ Returns\ true\ if\ the\ admiral\ can\ activate\ forces\ into\ their\ active\ star\ fleet,false\ otherwise\r\n\ An\ active\ star\ fleet\ can\ be\ activated\ if\:\r\n\ There\ are\ enough\ resources\ in\ the\ war\ chest\r\n\ @param\:\ name\ is\ the\ name\ of\ the\ admiral\ requesting\ to\ activate\ a\ force\r\n\ @param\:\ id\ ID\ of\ the\ forces\ they\ want\ to\ activate\ into\ their\ active\ star\ fleet\r\n
+comment6.params=id\ name
+comment6.target=java.lang.String\ ActivateForce(int,\ java.lang.String)
+comment6.text=\r\n\ Returns\ the\ result\ of\ a\ request\ to\ activate\ a\ force\r\n\ A\ force\ can\ be\ actived\ if\:\r\n\ There\ are\ enough\ resources\ in\ the\ war\ chest\r\n\ IF\ there\ are\ enough\ resources\ in\ the\ war\ chest\:\r\n\ Deductions\ should\ be\ made\ from\ the\ war\ chest\r\n\ Result\ of\ activation\ should\ be\ displayed\r\n\ State\ of\ war\ chest\ should\ be\ displayed\r\n\ IF\ there\ are\ not\ enough\ resources\ the\ state\ of\ the\ system\ remains\ the\ same,an\ appropriate\ message\ is\ displayed\r\n\ @param\:\ name\ is\ the\ name\ of\ the\ admiral\ activating\ the\ force\r\n\ @param\:\ id\ is\ the\ id\ of\ the\ force\ they\ want\ to\ activate\r\n
+comment7.params=num\ name
+comment7.target=java.lang.String\ DoBattle(int,\ java.lang.String)
+comment7.text=\r\n\ Returns\ the\ result\ of\ taking\ a\ battle\r\n\ The\ player\ may\ choose\ the\ battle\ he\ would\ like\ to\ take\ by\ giving\ its\ number\r\n\ A\ battle\ can\ be\ taken\ if\:\r\n\ the\ admiral\ has\ assembled\ an\ active\ star\ fleet.\r\n\ If\ the\ battle\ can\ be\ taken\:\r\n\ The\ first\ appropriate\ force\ in\ the\ ASF\ will\ be\ chosen\r\n\ its\ battle\ strengths\ will\ be\ compared\ to\ the\ enemy's\ battle\ strenghts\r\n\ IF\ ASF\ battle\ strenghts\ >\=\ enemy\ battle\ strength\:\r\n\ The\ system\ will\ display\ an\ appropriate\ message\ stating\ the\ ASF\ has\ won\r\n\ battle\ gains\ are\ added\ to\ the\ admiral's\ war\ chest\r\n\ IF\ no\ suitable\ force\ can\ be\ found\:\r\n\ The\ system\ will\ display\ an\ appropriate\ message\ stating\ no\ suitable\ force\ was\ found\r\n\ battle\ losses\ are\ deducted\ from\ war\ chest\r\n\ IF\ ASF\ battle\ strenght\ <\ enemy\ battle\ strenght\:\r\n\ The\ system\ will\ display\ an\ appropriate\ message\ stating\ the\ ASF\ has\ lost\r\n\ battle\ losses\ are\ deducted\ from\ war\ chest\r\n\ ASF\ force\ is\ destroyed\r\n\ @param\:\ name\ is\ the\ name\ of\ the\ admiral\r\n\ @param\:\ num\ is\ the\ number\ of\ the\ battle\r\n
+comment8.params=id\ name
+comment8.target=void\ RecallForce(int,\ java.lang.String)
+comment8.text=\r\n\ Allows\ credits\ to\ be\ added\ to\ war\ chest\ if\ it\ is\ running\ out\ of\ money\r\n\ A\ force\ may\ be\ recalled\ from\ the\ ASF\ to\ the\ UFF\ dock\r\n\ IF\:\ the\ force\ is\ not\ destroyed\r\n\ Once\ the\ system\ checks\ the\ force\ is\ not\ destroyed\r\n\ it\ will\ be\ removed\ from\ the\ ASF\r\n\ added\ back\ to\ the\ UFF\ dock\r\n\ half\ of\ the\ force's\ activation\ fee\ is\ added\ to\ the\ war\ chest\r\n\ @param\:\ name\ is\ the\ name\ of\ the\ admiral\r\n\ @param\:\ id\ is\ the\ id\ of\ the\ ASF\ force\r\n
+comment9.params=name1\ name2
+comment9.target=void\ SaveFile(java.lang.String,\ java.lang.String)
+comment9.text=\r\n\ Allows\ player\ to\ save\ the\ game\ to\ a\ named\ file\r\n\ @param\:\ name1\ is\ the\ name\ of\ the\ player\r\n\ @param\:\ name2\ is\ the\ name\ of\ the\ file\ \r\n
+numComments=11
