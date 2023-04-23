@@ -2,12 +2,6 @@ package cwk4;
 import java.io.*;
 import java.util.*;
 
-/**
- * Provide a command line user interface
- * 
- * @author A.A.Marczyk
- * @version 06/10/23
- */
 public class GameUI
 {
     private Scanner myIn = new Scanner(System.in);
@@ -40,22 +34,33 @@ public class GameUI
                 System.out.println(gp.getForceDetails(ref));
             } 
             else if (choice == 4) //activate Force
-            {   
-                
+            {
+                System.out.println("Enter Force reference");
+                myIn.nextLine();
+                String ref = (myIn.nextLine());
+                int output = gp.activateForce(ref);
+                System.out.println(activation(output));
             }
             else if (choice == 5) //List ASFleet
             {
-                
+                System.out.println(gp.getASFleet());
             }
             else if (choice == 6) //engage in a battle
             {
-                
+                System.out.println("Enter battle number");
+                myIn.nextLine();
+                int battleNo = (myIn.nextInt());
+                int output = gp.doBattle(battleNo);
+                System.out.println(Battle(output));
                 
             }
             
             else if (choice == 7) //recall force
             {
-                
+                System.out.println("Enter Force reference");
+                myIn.nextLine();
+                String ref = myIn.nextLine();
+                gp.recallForce(ref);
             }
             else if (choice==8) //view game state
             {
@@ -114,7 +119,16 @@ public class GameUI
             default: return "Error";
         }
     }
-    
+    private String Battle(int code){
+        switch(code){
+            case 0: return "Battle won";
+            case -1: return "no such battle";
+            case 1: return "Battle lost no suitable force";
+            case 2: return "Battle lost on battle strength";
+            case 4: return "Battle lost and admiral is defeated";
+            default: return "Error";
+        }
+    }
 
     
     public static void main(String[] args)
